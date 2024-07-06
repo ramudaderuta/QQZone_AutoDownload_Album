@@ -1,4 +1,4 @@
-from gui import Win, Simpledialog, SimpleMessagebox
+from gui import Win, Simpledialog, SimpleMessagebox  # Import your GUI code
 import time
 # from zone import *
 import os
@@ -427,6 +427,7 @@ class QQZonePictures:
         temp_msg = '>> 你共有以下相册，请输入需要下载相册的序号 \r\n'
         try:
             album_lists = photos_lists["data"]['albumListModeSort']
+            queue_print(album_lists)
         except:
             album_lists = []
             for item in photos_lists["data"]['albumListModeClass']:
